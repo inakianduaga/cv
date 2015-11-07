@@ -1,0 +1,14 @@
+before_install:
+- "sudo apt-get update && sudo apt-get install --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended"
+script:
+- mkdir _build
+- pdflatex -output-directory _build tex/inaki_anduaga_cv.tex
+deploy:
+  provider: releases
+  api_key:
+    secure: [YOUR KEY]
+  file:
+  - _build/inaki_anduaga_cv.pdf
+  skip_cleanup: true
+  on:
+    tags: true
