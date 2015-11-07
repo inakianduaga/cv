@@ -15,8 +15,7 @@
 %\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
 
 % character encoding
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
 %\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 
 % adjust the page margins
@@ -26,7 +25,7 @@
 
 % personal data
 \name{John}{Doe}
-\title{Inaki Anduaga CV}                               % optional, remove / comment the line if not wanted
+\title{ResumÃ© title}                               % optional, remove / comment the line if not wanted
 \address{street and number}{postcode city}{country}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
 \phone[mobile]{+1~(234)~567~890}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
 \phone[fixed]{+2~(345)~678~901}
@@ -57,72 +56,47 @@
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
 
+\section{Education}
+\cventry{year--year}{Degree}{Institution}{City}{\textit{Grade}}{Description}  % arguments 3 to 6 can be left empty
+\cventry{year--year}{Degree}{Institution}{City}{\textit{Grade}}{Description}
+
 \section{Master thesis}
 \cvitem{title}{\emph{Title}}
 \cvitem{supervisors}{Supervisors}
 \cvitem{description}{Short thesis abstract}
 
 \section{Experience}
-
-  \subsection{Professional}
-
-    % tado
-    \cventry{2013 - Now}{Full Stack Developer}{\href{https://www.tado.com}{tado gmbh}}{Munich}{}{\newline{}%
-      In charge of developing \& maintaining the frontend \& backend of the main tado° website, plus an internal dashboard/order management system used by customer support to handle the online shop. In addition, I manage the entire website content lifecycle, including CI infrastructure, AWS EC2 server setup/provisioning, database migrations/backups, code deployments, logging, performance tuning, etc.\newline{}%
-      Some of the tasks I frequently do:%
-      \begin{itemize}%
-        \item Adding functionality and improving the AngularJS webshop.
-        \item Implementing advanced backend features to support the complex website structure (DHL/Payone SDKs, Multilanguage support, AWS SNS emails, user accounts, etc).
-          \begin{itemize}%
-          \item Sub-achievement (a);
-          \end{itemize}
-        \item Management of the entire deployment pipeline (we deploy continuously, several times a day).
-      \end{itemize}}
-
-    % thecouponbay
-    \cventry{2010 - 2013}{Admin/Site Owner}{\href{https://web.archive.org/web/20141102092727/http:/thecouponbay.com/}{TheCouponbay.com}}{USA/Munich}{}{\newline{}%
-      Site owner and administrator, with the following core functions:
-      \begin{itemize}%
-        \item Full-stack web developer for all backend and frontend operations sitewide, including entire website design, server security, 3rd party API integrations
-        \item Manage marketing operations by creating and running Google Adwords \& Microsoft Bing Ads advertising campaigns through a self-built custom interface.
-        \item Establish affiliate partner relationships with publishers such as HP, Dell, Lenovo, Sony and Amazon.com.
-      \end{itemize}}
-    }
-
-  \subsection{Academic}
-    % UIUC
-    \cventry{2004-2010}{Teaching Assistant}{University of Illinois at Urbana-Champaign}{Urbana-Champaign}{}{
-      I taught physics to undergrads while doing my Ph.D thesis
-      \begin{itemize}
-        \item Classroom teaching of beginner and intermediate courses in Physics, such as Thermodynamics, Electromagnetism.
-        \item Grading of labs, exams and homework assignments.
-        \item Ranked as “Excellent Teacher Assistant” on multiple semesters (\href{http://cte.illinois.edu/teacheval/ices/pdf/Sp08List.pdf}{Spring 2008}, \href{http://cte.illinois.edu/teacheval/ices/pdf/Spring09List.pdf}{2009}, \& \href{http://cte.illinois.edu/teacheval/ices/pdf/Spring10List.pdf}{2010}, \href{http://cte.illinois.edu/teacheval/ices/pdf/Fall09List.pdf}{Fall 2009}).
-      \end{itemize}
-    }
-
-
-\section{Higher Education}
-  \cventry{2004-2010}{Physics Ph.D}{UIUC}{Urbana-Champaign, USA}{\textit{GPA: 3.92}}{
+\subsection{Vocational}
+\cventry{year--year}{Job title}{Employer}{City}{}{General description no longer than 1--2 lines.\newline{}%
+Detailed achievements:%
+\begin{itemize}%
+\item Achievement 1;
+\item Achievement 2, with sub-achievements:
+  \begin{itemize}%
+  \item Sub-achievement (a);
+  \item Sub-achievement (b), with sub-sub-achievements (don't do this!);
     \begin{itemize}
-      \item Specialization in theoretical Condensed Matter Physics
-      \item Thesis: \href{https://www.ideals.illinois.edu/handle/2142/18225}{“Many body topics in condensed matter physics”}.
+    \item Sub-sub-achievement i;
+    \item Sub-sub-achievement ii;
+    \item Sub-sub-achievement iii;
     \end{itemize}
-  }
-  \cventry{1998-2004}{Physics Bacherlor}{Instituto Balseiro / UNLP, Argentina}{\textit{8.96/10}{}
-  \cventry{1997}{High School Degree}{Lewiston, USA}{\textit{GPA: 3.9}{}
-
+  \item Sub-achievement (c);
+  \end{itemize}
+\item Achievement 3.
+\end{itemize}}
+\cventry{year--year}{Job title}{Employer}{City}{}{Description line 1\newline{}Description line 2}
+\subsection{Miscellaneous}
+\cventry{year--year}{Job title}{Employer}{City}{}{Description}
 
 \section{Languages}
-  \cvitemwithcomment{English}{Fluent}{C2 level, lived 7 years in the USA}
-  \cvitemwithcomment{German}{Intermediate}{}
-  \cvitemwithcomment{Spanish}{Native speaker}{}
-
+\cvitemwithcomment{Language 1}{Skill level}{Comment}
+\cvitemwithcomment{Language 2}{Skill level}{Comment}
+\cvitemwithcomment{Language 3}{Skill level}{Comment}
 
 \section{Computer skills}
 \cvdoubleitem{category 1}{XXX, YYY, ZZZ}{category 4}{XXX, YYY, ZZZ}
 \cvdoubleitem{category 2}{XXX, YYY, ZZZ}{category 5}{XXX, YYY, ZZZ}
 \cvdoubleitem{category 3}{XXX, YYY, ZZZ}{category 6}{XXX, YYY, ZZZ}
-
 
 \section{Interests}
 \cvitem{hobby 1}{Description}
