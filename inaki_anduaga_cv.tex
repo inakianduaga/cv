@@ -12,7 +12,7 @@
 \moderncvstyle{casual}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
 \moderncvcolor{blue}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
 %\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
-%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+% \nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
 
 % character encoding
 \usepackage[T1]{fontenc}
@@ -20,8 +20,8 @@
 %\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 
 % adjust the page margins
-\usepackage[scale=0.75]{geometry}
-%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+\usepackage[scale=0.76]{geometry}
+% \setlength{\hintscolumnwidth}{2.5cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
 % personal data
@@ -30,18 +30,18 @@
 \address{Schäftlarnstr. 104}{81371 Munich}{Germany}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
 \phone[mobile]{+49~015204256744}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
 \phone[fixed]{+49~8978067867}
+\social[github]{inakianduaga}                              % optional, remove / comment the line if not wanted
 \email{inaki@inakianduaga.com}                               % optional, remove / comment the line if not wanted
 \homepage{inakianduaga.com}                         % optional, remove / comment the line if not wanted
-\social[github]{inakianduaga}                              % optional, remove / comment the line if not wanted
-\social[linkedin]{inakianduaga}                        % optional, remove / comment the line if not wanted
+% \social[linkedin]{inakianduaga}                        % optional, remove / comment the line if not wanted
 %\social[twitter]{jdoe}                             % optional, remove / comment the line if not wanted
 % \extrainfo{additional information}                 % optional, remove / comment the line if not wanted
-\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+\photo[64pt][0]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
 %\quote{Some quote}                                 % optional, remove / comment the line if not wanted
 
 % bibliography adjustements (only useful if you make citations in your resume, or print a list of publications using BibTeX)
 %   to show numerical labels in the bibliography (default is to show no labels)
-\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
+% \makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
 %   to redefine the bibliography heading string ("Publications")
 %\renewcommand{\refname}{Articles}
 
@@ -56,13 +56,10 @@
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
 
-
 \section{About me}
 
-
-
     \textbf{Code must get better. Every day. Every time. Every line.} A relentless passion for better code is what drives
-     me late at night to read about new technologies, new tools, and new languages, and has brought me a long ways into the programming world in a a short few years.
+     me late at night to read about new technologies, new tools, and new languages, and has brought me a long ways in a a short few years.
      But I'm nowhere near where I want to be. In programming, with its ever-changing languages and technologies, there is always something to be excited about,
      with fun and incredible things waiting to be built. If feel there is so much to learn, yet so little time\ldots \newline{}
 
@@ -74,6 +71,8 @@
     developer working on solving practical problems in the most efficient and clean way. Although different problems require different tools, the underlying thinking
     is usually the same, namely consistant logic, big-picture analysis, generalization of specific solutions, and looking at edge cases, whether working with a
     differential equation or writing a unit test. These are the concepts I work hard to become better at everyday.
+
+\nopagebreak[4]
 
 \section{Software Skills}
   \cvitem{Javascript}{
@@ -128,8 +127,8 @@
     Git (\href{http://nvie.com/posts/a-successful-git-branching-model/}{git flow}),
     \href{https://github.com/inakianduaga/}{GitHub},
     Bitbucket,
-    automatic changelogs,
-    tagged releases.
+    Automatic Changelogs,
+    Tagged Releases.
   }
 
   \cvitem{API}{
@@ -150,7 +149,7 @@
     WebSockets,
     React Native,
     InfluxDB,
-    Grafana.
+    ClojureScript.
   }
 
 \section{Experience}
@@ -158,16 +157,13 @@
   \subsection{Professional}
 
     % tado
-    \cventry{2013 - Now}{Full Stack Developer}{\href{https://www.tado.com}{tado gmbh}}{Munich, Germany}{}{\newline{}%
+    \cventry{2013 - Now}{Full Stack Developer}{\href{https://www.tado.com}{tado gmbh}}{Munich, Germany}{}{\\
       In charge of developing \& maintaining the frontend \& backend of the main tado° website, plus an internal dashboard/order management system used by customer support to handle the online shop. In addition, I manage the entire website content lifecycle, including CI infrastructure, AWS EC2 server setup/provisioning, database migrations/backups, code deployments, logging, performance tuning, etc.\newline{}%
       Some of the tasks I frequently do:%
       \begin{itemize}%
-        \item Adding functionality and improving the AngularJS webshop.
-        \item Implementing advanced backend features to support the complex website structure (DHL/Payone SDKs, Multilanguage support, AWS SNS emails, user accounts, etc).
-          \begin{itemize}%
-          \item Sub-achievement (a);
-          \end{itemize}
-        \item Management of the entire deployment pipeline (we deploy continuously, several times a day).
+        \item Adding functionality and improving the AngularJS-based webshop.
+        \item Implementing advanced backend features to support the complex website structure (external SDKs, multilanguage support, AWS S3 storage, user accounts, etc).
+        \item Management of the entire deployment pipeline (including continuous deployment).
       \end{itemize}}
 
     % thecouponbay
@@ -176,9 +172,9 @@
       \begin{itemize}%
         \item Full-stack web developer for all backend and frontend operations sitewide, including entire website design, server security, 3rd party API integrations
         \item Manage marketing operations by creating and running Google Adwords \& Microsoft Bing Ads advertising campaigns through a self-built custom interface.
-        \item Establish affiliate partner relationships with publishers such as HP, Dell, Lenovo, Sony and Amazon.com.
+        \item Establish affiliate partner relationships with publishers such as HP, Dell, Lenovo and Sony.
       \end{itemize}}
-    }
+
 
   \subsection{Academic}
     % UIUC
@@ -208,7 +204,7 @@
 \section{Publications}
 
   \cventry{2008}{Michael Stone, Inaki Anduaga and Lei Xing}{}{The classical hydrodynamics of the Calogero–Sutherland model}{\textit{J. Phys. A: Math. Theor. 41 275401 doi:10.1088/1751-8113/41/27/275401}}{}
-  \cventry{2007}{Michael Stone, Inaki Anduaga}{}{Mass flows and angular momentum density for $\[p_x+i_p_y\]$ paired fermions in a harmonic trap}{\textit{Annals of Physics DOI:10.1016/j.aop.2007.04.020}}{}
+  \cventry{2007}{Michael Stone, Inaki Anduaga}{}{Mass flows and angular momentum density for $ p_x + i p_y $ paired fermions in a harmonic trap}{\textit{Annals of Physics DOI:10.1016/j.aop.2007.04.020}}{}
 
 \end{document}
 

@@ -1,2 +1,1 @@
-from narf/latex
-
+FROM blang/latex
