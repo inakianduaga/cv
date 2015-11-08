@@ -38,7 +38,7 @@
 \social[github]{jdoe}                              % optional, remove / comment the line if not wanted
 \extrainfo{additional information}                 % optional, remove / comment the line if not wanted
 \photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
-\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
 
 % bibliography adjustements (only useful if you make citations in your resume, or print a list of publications using BibTeX)
 %   to show numerical labels in the bibliography (default is to show no labels)
@@ -56,6 +56,21 @@
 %\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
+
+
+\section{About me}
+
+  \cvitem{Relentless drive}{
+
+    Code must get better. Every day. Every time. Every line
+    underlying logic
+    break up the complexity
+    But I'm nowhere near where I want to be.
+
+    Part of what makes programming so much fun is that it is an ever-changing landscape, with an opportunity to innovate and learn around the corner.
+
+  }
+
 
 \section{Software Skills}
   \cvitem{Javascript}{
@@ -140,7 +155,7 @@
   \subsection{Professional}
 
     % tado
-    \cventry{2013 - Now}{Full Stack Developer}{\href{https://www.tado.com}{tado gmbh}}{Munich}{}{\newline{}%
+    \cventry{2013 - Now}{Full Stack Developer}{\href{https://www.tado.com}{tado gmbh}}{Munich, Germany}{}{\newline{}%
       In charge of developing \& maintaining the frontend \& backend of the main tado° website, plus an internal dashboard/order management system used by customer support to handle the online shop. In addition, I manage the entire website content lifecycle, including CI infrastructure, AWS EC2 server setup/provisioning, database migrations/backups, code deployments, logging, performance tuning, etc.\newline{}%
       Some of the tasks I frequently do:%
       \begin{itemize}%
@@ -164,8 +179,7 @@
 
   \subsection{Academic}
     % UIUC
-    \cventry{2004-2010}{Teaching Assistant}{University of Illinois at Urbana-Champaign}{Urbana-Champaign}{}{
-      I taught physics to undergrads while doing my Ph.D thesis
+    \cventry{2004-2010}{Teaching Assistant}{UIUC}{Urbana-Champaign, USA}{}{
       \begin{itemize}
         \item Classroom teaching of beginner and intermediate courses in Physics, such as Thermodynamics, Electromagnetism.
         \item Grading of labs, exams and homework assignments.
@@ -182,54 +196,17 @@
     \end{itemize}
   }
   \cventry{1998-2004}{Physics Bacherlor}{Instituto Balseiro / UNLP}{Argentina}{\textit{8.96/10}}{}
-  \cventry{1997}{High School Degree}{Lewiston High School}{Lewiston, USA}{\textit{GPA: 3.9}}{}
 
 \section{Languages}
   \cvitemwithcomment{English}{Fluent}{C2 level, lived 7 years in the USA}
   \cvitemwithcomment{German}{Intermediate}{}
   \cvitemwithcomment{Spanish}{Native speaker}{}
 
-\section{Interests}
-  \cvitem{hobby 1}{Description}
-  \cvitem{hobby 2}{Description}
-  \cvitem{hobby 3}{Description}
-
-\section{Extra 1}
-\cvlistitem{Item 1}
-\cvlistitem{Item 2}
-\cvlistitem{Item 3. This item is particularly long and therefore normally spans over several lines. Did you notice the indentation when the line wraps?}
-
-\section{Extra 2}
-\cvlistdoubleitem{Item 1}{Item 4}
-\cvlistdoubleitem{Item 2}{Item 5\cite{book1}}
-\cvlistdoubleitem{Item 3}{Item 6. Like item 3 in the single column list before, this item is particularly long to wrap over several lines.}
-
-\section{References}
-\begin{cvcolumns}
-  \cvcolumn{Category 1}{\begin{itemize}\item Person 1\item Person 2\item Person 3\end{itemize}}
-  \cvcolumn{Category 2}{Amongst others:\begin{itemize}\item Person 1, and\item Person 2\end{itemize}(more upon request)}
-  \cvcolumn[0.5]{All the rest \& some more}{\textit{That} person, and \textbf{those} also (all available upon request).}
-\end{cvcolumns}
-
-% Publications from a BibTeX file without multibib
-%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
-%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
-\nocite{*}
-\bibliographystyle{plain}
-\bibliography{publications}                        % 'publications' is the name of a BibTeX file
-
-% Publications from a BibTeX file using the multibib package
 \section{Publications}
-ADD PUBLICATIONS HERE!
 
-%\nocitebook{book1,book2}
-%\bibliographystylebook{plain}
-%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
-%\nocitemisc{misc1,misc2,misc3}
-%\bibliographystylemisc{plain}
-%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+  \cventry{2008}{Michael Stone, Inaki Anduaga and Lei Xing}{}{The classical hydrodynamics of the Calogero–Sutherland model}{\textit{J. Phys. A: Math. Theor. 41 275401 doi:10.1088/1751-8113/41/27/275401}}{}
+  \cventry{2007}{Michael Stone, Inaki Anduaga}{}{Mass flows and angular momentum density for $\[p_x+i_p_y\]$ paired fermions in a harmonic trap}{\textit{Annals of Physics DOI:10.1016/j.aop.2007.04.020}}{}
 
 \end{document}
-
 
 %% end of file `template.tex'.
