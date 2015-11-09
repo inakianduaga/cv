@@ -1,0 +1,213 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2015 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{casual}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvcolor{blue}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+% \nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+%
+%\usepackage{ulem} % Enable for dotted text
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+% \setlength{\hintscolumnwidth}{2.5cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\name{Inaki}{Anduaga}
+\title{Curriculum Vitae}                               % optional, remove / comment the line if not wanted
+\address{Schäftlarnstr. 104}{81371 Munich}{Germany}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+\phone[mobile]{+49~015204256744}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
+\phone[fixed]{+49~8978067867}
+\social[github]{inakianduaga}                              % optional, remove / comment the line if not wanted
+\email{inaki@inakianduaga.com}                               % optional, remove / comment the line if not wanted
+\homepage{inakianduaga.com}                         % optional, remove / comment the line if not wanted
+% \social[linkedin]{inakianduaga}                        % optional, remove / comment the line if not wanted
+%\social[twitter]{jdoe}                             % optional, remove / comment the line if not wanted
+% \extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+\photo[64pt][0]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% bibliography adjustements (only useful if you make citations in your resume, or print a list of publications using BibTeX)
+%   to show numerical labels in the bibliography (default is to show no labels)
+% \makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
+%   to redefine the bibliography heading string ("Publications")
+%\renewcommand{\refname}{Articles}
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+\section{About me}
+
+    \textbf{Code must get better. Every day. Every time. Every line.} A relentless passion for better code is what drives
+     me late at night to read about new technologies, new tools, and new languages, and has brought me a long ways in a a short few years.
+     But I'm nowhere near where I want to be. In programming, with its ever-changing languages and technologies, there is always something to be excited about,
+     with fun and incredible things awaiting to be built. If feel there is so much to learn, yet so little time\ldots \newline{}
+
+    % Like a young child craving for new Lego pieces, programming, with its ever-changing languages and technologies, brings endless fun and new opportunities to improve.
+    % And I want to learn it all... (or: So much to learn, so little time...)
+    % Part of what makes programming so much fun is that it is an ever-changing landscape, with an opportunity to innovate and learn around the corner.
+
+    I've been solving problems for the past 15 years, first as a physicist fascinated by the beauty and complexity behind nature's laws, and nowadays as a software
+    developer working on solving practical problems in the most efficient and clean way. Although different problems require different tools, the underlying thinking
+    is usually the same, namely consistant logic, big-picture analysis, generalization of specific solutions, and looking at edge cases, whether working with a
+    differential equation or writing a unit test. These are the concepts I work hard to become better at everyday.
+
+\nopagebreak[4]
+
+\section{Software Skills}
+  \cvitem{Javascript}{
+    \href{https://github.com/inakianduaga/node-express-boilerplate}{\textbf{Node.js}},
+    \href{https://github.com/inakianduaga/github-ci-tasks/tree/develop}{\textbf{TypeScript}} (+ES6/ES7),
+    \href{https://github.com/inakianduaga/angular-remote-logger}{\textbf{AngularJS}},
+    jQuery,
+    Npm,
+    \href{http://bower.io/search/?q=angular-remote-logger}{Bower},
+    \href{https://coveralls.io/github/inakianduaga/angular-remote-logger}{\textbf{Jasmine}},
+    \href{https://github.com/inakianduaga/node-express-boilerplate/blob/master/src/spec/routes/exampleMochaSpec.ts}{Mocha},
+    \href{https://github.com/inakianduaga/log-proxy-server/tree/develop/gulp}{\textbf{Gulp}},
+    Grunt,
+    Webpack.
+  }
+
+  \cvitem{PHP}{
+    \href{https://github.com/inakianduaga/laravel-html-builder-extensions}{\textbf{Laravel}},
+    \href{https://packagist.org/users/inakianduaga/packages/}{\textbf{Composer}},
+    \textbf{PHP OOP},
+    \href{https://github.com/inakianduaga/eloquent-external-storage/tree/master/tests}{Mockery/Phpunit},
+    ORM,
+    Types,
+    PHPDoc.
+  }
+
+  \cvitem{DevOps}{
+    \textbf{AWS Stack}: RDS, Cloudfront, EC2, ELB, S3, Route53, OpsWorks, SDK (CLI, NodeJS).
+    \href{https://hub.docker.com/r/inakianduaga/}{\textbf{Docker}},
+    CI (\href{https://travis-ci.org/inakianduaga/}{\textbf{Travis}}, \href{https://github.com/inakianduaga/docker-jenkins-nginx}{\textbf{Jenkins}}),
+    \href{https://github.com/inakianduaga/cloud-development}{\textbf{Nginx}},
+    Apache,
+    Varnish,
+    HHVM,
+    Rsyslog,
+    Kibana,
+    ElasticSearch,
+    automatic blue-green deployments,
+    \href{https://github.com/inakianduaga/cloud-development/tree/master/scripts/upstart}{Upstart}.
+  }
+
+  \cvitem{+Languages}{
+    \href{https://github.com/inakianduaga/cloud-development/search?l=bash}{Bash},
+    Less,
+    HTML5,
+    Bootstrap,
+    \href{https://gist.github.com/inakianduaga/ef2220f975d8fe6aa88d}{Perl} (tiny bit),
+    \href{http://arxiv.org/pdf/0803.3735.pdf}{Latex}.
+  }
+
+  \cvitem{Versioning}{
+    Git (\href{http://nvie.com/posts/a-successful-git-branching-model/}{git flow}),
+    \href{https://github.com/inakianduaga/}{GitHub},
+    Bitbucket,
+    Automatic Changelogs,
+    Tagged Releases.
+  }
+  \cvitem{API}{
+    Rest,
+    \href{https://www.tado.com/shop/api/public/v1/api-docs}{Swagger},
+    OAuth.
+  }
+
+  \cvitem{Learning, Queued}{
+    \href{https://github.com/inakianduaga/react-redux-typescript/tree/develop}{\textbf{ReactJS (w/ redux pattern)}},
+    \textbf{ReactiveX},
+    \textbf{AngularJS 2},
+    functional programming,
+    Scala (\textbf{strong-typed languages}),
+    AWS Lambda,
+    Hacklang,
+    Graph DB,
+    WebSockets,
+    React Native,
+    InfluxDB,
+    ClojureScript.
+  }
+
+\section{Experience}
+
+  %\subsection{Professional}
+
+    % tado
+    \cventry{2013 - Now}{Full Stack Developer}{\href{https://www.tado.com}{tado gmbh}}{Munich, Germany}{}{\\
+      In charge of developing and maintaining the entire frontend \& backend of the main www.tado.com website, plus an internal dashboard/order management system used by customer support to handle the online shop. In addition, I manage the entire website content lifecycle, including CI infrastructure, AWS EC2 server setup/provisioning, database migrations/backups, code deployments, logging, performance tuning, etc.\newline{}%
+      Some of the tasks I frequently do:%
+      \begin{itemize}%
+        \item Adding functionality and improving the AngularJS-based webshop.
+        \item Implementing advanced backend features to support the complex website structure (external SDKs, multilanguage support, AWS S3 storage, user accounts, etc).
+        \item Management of the entire deployment pipeline (including continuous deployment).
+      \end{itemize}}
+
+    % thecouponbay
+    \cventry{2010 - 2013}{Admin/Site Owner}{\href{https://web.archive.org/web/20141102092727/http:/thecouponbay.com/}{TheCouponbay.com}}{USA/Munich}{}{\newline{}%
+      Site owner and administrator, with the following core functions:
+      \begin{itemize}%
+        \item Full-stack web developer for all backend and frontend operations sitewide, including entire website design, server security, 3rd party API integrations
+        \item Manage marketing operations by creating and running Google Adwords \& Microsoft Bing Ads advertising campaigns through a self-built custom interface.
+        \item Establish affiliate partner relationships with publishers such as HP, Dell, Lenovo and Sony.
+      \end{itemize}}
+
+
+  %\subsection{Academic}
+    % UIUC
+    \cventry{2004-2010}{Teaching Assistant}{UIUC}{Urbana-Champaign, USA}{}{
+      \begin{itemize}
+        \item Classroom teaching of beginner and intermediate courses in Physics, such as Thermodynamics, Electromagnetism.
+        \item Grading of labs, exams and homework assignments.
+        \item Ranked as “Excellent Teacher Assistant” on multiple semesters (\href{http://cte.illinois.edu/teacheval/ices/pdf/Sp08List.pdf}{Spring 2008}, \href{http://cte.illinois.edu/teacheval/ices/pdf/Spring09List.pdf}{2009}, \& \href{http://cte.illinois.edu/teacheval/ices/pdf/Spring10List.pdf}{2010}, \href{http://cte.illinois.edu/teacheval/ices/pdf/Fall09List.pdf}{Fall 2009}).
+      \end{itemize}
+    }
+
+
+\section{Higher Education}
+  \cventry{2004-2010}{Physics Ph.D}{UIUC}{Urbana-Champaign, USA}{\textit{GPA: 3.92}}{
+    \begin{itemize}
+      \item Specialization in theoretical Condensed Matter Physics
+      \item Thesis: \href{https://www.ideals.illinois.edu/handle/2142/18225}{“Many body topics in condensed matter physics”}.
+    \end{itemize}
+  }
+  \cventry{1998-2004}{Physics Bacherlor}{Instituto Balseiro / UNLP}{Argentina}{\textit{8.96/10}}{}
+
+\section{Languages}
+  \cvitemwithcomment{English}{Fluent}{C2 level, lived 7 years in the USA}
+  \cvitemwithcomment{German}{Intermediate}{}
+  \cvitemwithcomment{Spanish}{Native speaker}{}
+
+\section{Publications}
+
+  \cventry{2008}{Michael Stone, Inaki Anduaga and Lei Xing}{}{The classical hydrodynamics of the Calogero–Sutherland model}{\textit{J. Phys. A: Math. Theor. 41 275401 doi:10.1088/1751-8113/41/27/275401}}{}
+  \cventry{2007}{Michael Stone, Inaki Anduaga}{}{Mass flows and angular momentum density for $ p_x + i p_y $ paired fermions in a harmonic trap}{\textit{Annals of Physics DOI:10.1016/j.aop.2007.04.020}}{}
+
+\end{document}
+
+%% end of file `template.tex'.
