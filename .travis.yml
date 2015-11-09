@@ -12,4 +12,5 @@ deploy:
   skip_cleanup: true
   on:
     repo: inakianduaga/cv
+    branch: master
     tags: true
