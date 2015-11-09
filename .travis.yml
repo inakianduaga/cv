@@ -2,7 +2,8 @@ before_install:
 - "sudo apt-get update && sudo apt-get install --no-install-recommends texlive-full"
 script:
 - mkdir _build
-- pdflatex -interaction=nonstopmode -output-directory _build inaki_anduaga_cv.tex  > /dev/null 2>&1
+#http://unix.stackexchange.com/questions/118217/chmod-silent-mode-how-force-exit-code-0-in-spite-of-error
+- pdflatex -interaction=nonstopmode -output-directory _build inaki_anduaga_cv.tex || true
 deploy:
   provider: releases
   api_key:
