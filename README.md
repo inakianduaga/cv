@@ -35,9 +35,10 @@ then run
 $ gulp release --version=<major|minor|patch>
 ```
 
-will bump the package version, commit changes, tag the commit and push it to github.
-From here on, Travis CI will build the pdf file and upload it as a [*github release*](https://github.com/inakianduaga/cv/releases/latest)
-to GitHub, and also as into a fixed [AWS S3 bucket](https://s3.amazonaws.com/curriculum-vitae-automated-build/inaki_anduaga_cv.pdf) for direct static linking.
+will bump the package version, commit changes, tag the commit and push it to github. From here on, Travis CI will
+- compile the latex file into pdf
+- upload the pdf as a [*github release*](https://github.com/inakianduaga/cv/releases/latest) to GitHub
+- upload the pdf into an [AWS S3 bucket](https://s3.amazonaws.com/curriculum-vitae-automated-build/inaki_anduaga_cv.pdf) for direct static linking.
 
 [travis-url]: https://travis-ci.org/inakianduaga/cv
 [travis-image]: https://travis-ci.org/inakianduaga/cv.svg?branch=master
