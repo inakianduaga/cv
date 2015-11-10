@@ -37,7 +37,7 @@ $ gulp release --version=<major|minor|patch>
 
 will bump the package version, commit changes, tag the commit and push it to github.
 From here on, Travis CI will build the pdf file and upload it as a *github release*
-to github
+to github, and also as into an AWS S3 bucket for direct static linking.
 
 [travis-url]: https://travis-ci.org/inakianduaga/cv
 [travis-image]: https://travis-ci.org/inakianduaga/cv.svg?branch=master
