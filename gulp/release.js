@@ -12,6 +12,7 @@ let gulp = require('gulp'),
 const VERSION_TYPE = $.environment.get('version', 'minor');
 const COMMIT_MESSAGE = $.environment.get('message', false);
 
+
 /**
  * Reads the package.json file
  * `fs` is used instead of require to prevent caching in watch (require caches)
@@ -31,7 +32,7 @@ gulp.task('commit', false, ['bump'], () => {
 
   let pkg = getPackageJson();
   let v = `v${pkg.version}`;
-  let message = `Release ${v}`;
+  let message = COMMIT_MESSAGE ? `Release ${v}: ${COMMIT_MESSAGE}` : `Release ${v}`;
 
   return gulp.src('./')
     .pipe($.git.add())
@@ -42,7 +43,7 @@ gulp.task('release', 'Bumps package version, tags release & pushes the current b
 
   let pkg = getPackageJson();
   let v = `v${pkg.version}`;
-  let message = COMMIT_MESSAGE ? `Release ${v}: ${COMMIT_MESSAGE}` : `Release ${v}`;
+  let message = `Release ${v}`;
 
   $.git.tag(v, message, function(err){
     if (err) throw err;
