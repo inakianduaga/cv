@@ -1,7 +1,7 @@
 sudo: required
 dist: trusty
 before_install:
-- "sudo apt-get update && sudo apt-get install --no-install-recommends texlive-full python-pygments gnuplot"
+- "sudo apt-get update -q && sudo apt-get install -yq --no-install-recommends texlive-full python-pygments gnuplot"
 script:
 - mkdir _build
 #http://unix.stackexchange.com/questions/118217/chmod-silent-mode-how-force-exit-code-0-in-spite-of-error
