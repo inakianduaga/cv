@@ -4,12 +4,14 @@ dist: trusty
 #   - docker
 before_install:
 - docker pull blang/latex
-#- "sudo apt-get update -q && sudo apt-get install -yq --no-install-recommends texlive-full python-pygments gnuplot"
 script:
 - mkdir _build
-# - pdflatex -interaction=nonstopmode -output-directory _build inaki_anduaga_cv.tex || true
 #http://unix.stackexchange.com/questions/118217/chmod-silent-mode-how-force-exit-code-0-in-spite-of-error
 - docker run --rm -i --net=none -v $PWD:/data blang/latex pdflatex -interaction=nonstopmode --output-directory=./_build inaki_anduaga_cv.tex || true
+# Give back ownership of file to current user
+- sudo chown -R $USER:$USER ./_build
+# Remove non-pdf files from build folder
+- find ./_build -type f ! -name '*.pdf' -delete
 deploy:
   # Github Release
   - provider: releases
