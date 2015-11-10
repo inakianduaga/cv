@@ -1,5 +1,4 @@
 sudo: required
-dist: trusty
 services:
   - docker
 before_install:
@@ -21,7 +20,7 @@ deploy:
     acl: public_read
     skip_cleanup: true
     on:
-      repo: inakianduaga/cv      
+      repo: inakianduaga/cv
       tags: true
   # Github Release
   - provider: releases
