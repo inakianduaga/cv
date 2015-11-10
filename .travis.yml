@@ -27,7 +27,8 @@ deploy:
   - provider: releases
     api_key:
       secure: OOf0Rcct6ONSTZ7Saps0QuaffV0bPYrbvuAg1pJdlRD3lG3WjzIfbGKlorTpDmC8yrjw9Vx5Ci3cv5EyfiHcKlAmWu+vfxjxJKFZoufPFyY9A9xVKOfMfJeMrR2etJgVcixaN1I5x8FXMJgJFhGg5aJoP7qg35gfyv+U57lT3aa058ufSicL3eXejSyv6P1Jlcmf+9Sr6ks2DQzBTKI9lEDH6oUld6tzkTgnFSLg9pB2bwtQgl6gtg5RceDcTUknZ15cZCLjyigLdJUkmP1+6MH5D97oiMaB3ijh2tEQJfE05fKGZMFGSsVbjOJPGExi6DV9LGZkYn6l61A+sYWYcEPce5dSCmkjeP5TpzCqY7o3EAuxIs597MwQBQMi539raQkISrpZ41t0rdGnb/zeUyBLdbNvZjAxn5UAt0KUHvf2EWoes3Dz7qc2QVfE/JGmwCmAXEF6iuO2Em/O6r3OKi7uuzwdqSFHZdq8a0NpdkOrF6wn0lfXHWO0s64S40sMriVqGrnrhVUGbmy9GfZV5mGCgxnViORs+Yxoxb8pRL8cw7dp/319yj/W6HFO1XI1bZfRC255lOMQeHpqp+A1RjvVvZ5bJG4duztJw4AvjhtW8+i36+M1UFtTMl+wzDjH1YBkgBYxHxgw0eh95akXlsDklREhhIZONpdiD6V9ctA=
-    file: _build/inaki_anduaga_cv.pdf
+    file:
+    - _build/inaki_anduaga_cv.pdf
     skip_cleanup: true
     on:
       repo: inakianduaga/cv

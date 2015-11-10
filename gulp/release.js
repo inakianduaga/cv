@@ -10,6 +10,7 @@ let gulp = require('gulp'),
 
 //CLI parameters
 const VERSION_TYPE = $.environment.get('version', 'minor');
+const COMMIT_MESSAGE = $.environment.get('message', false);
 
 /**
  * Reads the package.json file
@@ -41,7 +42,7 @@ gulp.task('release', 'Bumps package version, tags release & pushes the current b
 
   let pkg = getPackageJson();
   let v = `v${pkg.version}`;
-  let message = `Release ${v}`;
+  let message = COMMIT_MESSAGE ? `Release ${v}: ${COMMIT_MESSAGE}` : `Release ${v}`;
 
   $.git.tag(v, message, function(err){
     if (err) throw err;
@@ -53,6 +54,7 @@ gulp.task('release', 'Bumps package version, tags release & pushes the current b
 
 }, {
   options: {
-    'version [minor]': 'The semantic version type for this release [patch|minor|major]. See http://semver.org/ for information.'
+    'version [minor]': 'The semantic version type for this release [patch|minor|major]. See http://semver.org/ for information.',
+    'message': 'Message to add to the commit'
   }
 });
