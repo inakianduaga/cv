@@ -1,6 +1,7 @@
 sudo: required
-services:
-  - docker
+dist: trusty
+# services:
+#   - docker
 before_install:
 - docker pull blang/latex
 #- "sudo apt-get update -q && sudo apt-get install -yq --no-install-recommends texlive-full python-pygments gnuplot"
@@ -14,7 +15,7 @@ deploy:
   - provider: s3
     access_key_id: AKIAIHZWB2UXGOWZV7MA
     secret_access_key:
-    secure: e7YgoOhC52ARTrZFTr6tGA5UpAr/eGe95k353suDlV9AztMh2a6DAcJ0NWslEBNNa/p9fXTPC6cWP9oqaKxU3qGJ/B1jYotXgGPYOykq9aTGdG9Jcofn2ash8VmQsj3juAs3/GUTEI0Zpgz+kWUi9dxJeX6UuTW8mpJO21IRLUqFSH06UAoN7/IRHfdRR8tEr28f7MrcLMA/4vh00clqOKCDIhw746zDCiiE+CHgpTbHT3WvtGZYCNEfA+oWP91kCWWE/lwiBoOj/byQX4v81XZQGfgmmxYspMTWJCBgEG7kTfaTlPk3nCeiATsR+AFQsoO5iWX2iQ66BLe6NoYPIHnG9LOUgGGUX/ieeAb+YUZlu/jySMySNjdkZ1MCIcmmtm9u990TXwA/R5NKh7XGkAuXDgWWweF3lIyPCqpK6Vho0x3dt+siH2dcYXBYalTZRpxm8HXb/9qaKiH17QmBvlezhjaEDN9sKnIqAI0hNrlpOJ8AjgK4KVNyI5FFXPAKGtk1KZ6cKPxGAiCEbzuFSHnkCRpiETjb0svM7I8yLDl5D55Oqur2h/Jvf72xFIbi3++S3UcEFqdoKefjuhR/J89Ph5CMrjjdYKYTZtRTpcyh/hqKdPslce1OYachShbZSkuwI1a5oKStc5H4AYA5+aJ61AEqOPx2DJqe14825Zw=
+      secure: e7YgoOhC52ARTrZFTr6tGA5UpAr/eGe95k353suDlV9AztMh2a6DAcJ0NWslEBNNa/p9fXTPC6cWP9oqaKxU3qGJ/B1jYotXgGPYOykq9aTGdG9Jcofn2ash8VmQsj3juAs3/GUTEI0Zpgz+kWUi9dxJeX6UuTW8mpJO21IRLUqFSH06UAoN7/IRHfdRR8tEr28f7MrcLMA/4vh00clqOKCDIhw746zDCiiE+CHgpTbHT3WvtGZYCNEfA+oWP91kCWWE/lwiBoOj/byQX4v81XZQGfgmmxYspMTWJCBgEG7kTfaTlPk3nCeiATsR+AFQsoO5iWX2iQ66BLe6NoYPIHnG9LOUgGGUX/ieeAb+YUZlu/jySMySNjdkZ1MCIcmmtm9u990TXwA/R5NKh7XGkAuXDgWWweF3lIyPCqpK6Vho0x3dt+siH2dcYXBYalTZRpxm8HXb/9qaKiH17QmBvlezhjaEDN9sKnIqAI0hNrlpOJ8AjgK4KVNyI5FFXPAKGtk1KZ6cKPxGAiCEbzuFSHnkCRpiETjb0svM7I8yLDl5D55Oqur2h/Jvf72xFIbi3++S3UcEFqdoKefjuhR/J89Ph5CMrjjdYKYTZtRTpcyh/hqKdPslce1OYachShbZSkuwI1a5oKStc5H4AYA5+aJ61AEqOPx2DJqe14825Zw=
     bucket: curriculum-vitae-automated-build
     local-dir: _build
     acl: public_read
