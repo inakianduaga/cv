@@ -23,6 +23,14 @@
 %\usepackage{ulem} % Enable for dotted text
 \usepackage{tikz}
 
+\newcommand{\udot}[1]{%
+    \tikz[baseline=(todotted.base)]{
+        \node[inner sep=1pt,outer sep=0pt] (todotted) {#1};
+        \draw[dotted] (todotted.south west) -- (todotted.south east);
+    }%
+}%
+
+
 % adjust the page margins
 \usepackage[scale=0.75]{geometry}
 % \setlength{\hintscolumnwidth}{2.5cm}                % if you want to change the width of the column with the dates
@@ -117,7 +125,7 @@
     \href{https://github.com/inakianduaga/cloud-development/tree/master/scripts/upstart}{Upstart}.
   }
 
-  \cvitem{+Languages}{
+  \cvitem{Other}{
     \href{https://github.com/inakianduaga/cloud-development/search?l=bash}{Bash},
     Less,
     HTML5,
@@ -154,18 +162,24 @@
     ClojureScript.
   }
 
-\section{Experience}
+  \cvitem{}{}
+  \cvitem{}{
+    Tip: Click on the skills to view examples of my work.
+  }
+
+\section{Professional Experience}
 
   %\subsection{Professional}
 
     % tado
     \cventry{2013 - Now}{Full Stack Developer}{\href{https://www.tado.com}{tado gmbh}}{Munich, Germany}{}{\\
-      In charge of developing and maintaining the entire frontend \& backend of the main www.tado.com website, plus an internal dashboard/order management system used by customer support to handle the online shop. In addition, I manage the entire website content lifecycle, including CI infrastructure, AWS EC2 server setup/provisioning, database migrations/backups, code deployments, logging, performance tuning, etc.\newline{}%
+      In charge of developing and maintaining the entire frontend \& backend of the main \href{https://www.tado.com}{tado.com} website, plus an internal dashboard/order management system used by customer support to handle the online shop. In addition, I manage the entire website content lifecycle, including CI infrastructure, AWS EC2 server setup/provisioning, database migrations/backups, code deployments, logging, performance tuning, etc.\newline{}%
       Some of the tasks I frequently do:%
       \begin{itemize}%
+        \item Upgrading all dev \& production software stacks (incl packages and tooling).
+        \item Management of the entire deployment pipeline (incl. daily continuous deployments).
         \item Adding functionality and improving the AngularJS-based webshop.
-        \item Implementing advanced backend features to support the complex website structure (external SDKs, multilanguage support, AWS S3 storage, user accounts, etc).
-        \item Management of the entire deployment pipeline (including continuous deployment).
+        \item Implementing advanced backend features to support the complex website structure (external SDKs, multilanguage support, order invoicing, user accounts, etc).
       \end{itemize}}
 
     % thecouponbay
@@ -183,7 +197,7 @@
     \cventry{2004-2010}{Teaching Assistant}{UIUC}{Urbana-Champaign, USA}{}{
       \begin{itemize}
         \item Classroom teaching of beginner and intermediate courses in Physics, such as Thermodynamics, Electromagnetism.
-        \item Grading of labs, exams and homework assignments.
+        % \item Grading of labs, exams and homework assignments.
         \item Ranked as “Excellent Teacher Assistant” on multiple semesters (\href{http://cte.illinois.edu/teacheval/ices/pdf/Sp08List.pdf}{Spring 2008}, \href{http://cte.illinois.edu/teacheval/ices/pdf/Spring09List.pdf}{2009}, \& \href{http://cte.illinois.edu/teacheval/ices/pdf/Spring10List.pdf}{2010}, \href{http://cte.illinois.edu/teacheval/ices/pdf/Fall09List.pdf}{Fall 2009}).
       \end{itemize}
     }
