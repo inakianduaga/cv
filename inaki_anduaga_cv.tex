@@ -39,13 +39,13 @@
 % personal data
 \name{Inaki}{Anduaga}
 \title{Curriculum Vitae}                               % optional, remove / comment the line if not wanted
-\address{Schäftlarnstr. 104}{81371 Munich}{Germany}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
-\phone[mobile]{+49~015204256744}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
-\phone[fixed]{+49~8978067867}
+\address{Offenbachstr. 5d}{81245 Munich}{Germany}   % optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+%\phone[mobile]{+49~015204256744}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
+%\phone[fixed]{+49~8978067867}
 \social[github]{inakianduaga}                              % optional, remove / comment the line if not wanted
 \email{inaki@inakianduaga.com}                               % optional, remove / comment the line if not wanted
-\homepage{inakianduaga.com}                         % optional, remove / comment the line if not wanted
-% \social[linkedin]{inakianduaga}                        % optional, remove / comment the line if not wanted
+% \homepage{inakianduaga.com}                         % optional, remove / comment the line if not wanted
+\social[linkedin]{inakianduaga}                        % optional, remove / comment the line if not wanted
 %\social[twitter]{jdoe}                             % optional, remove / comment the line if not wanted
 % \extrainfo{additional information}                 % optional, remove / comment the line if not wanted
 \photo[64pt][0]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
@@ -72,95 +72,82 @@
 
     \textbf{Code must get better. Every day. Every time. Every line.} A relentless passion for better code is what drives
      me late at night to read about new technologies, new tools, and new languages, and has brought me a long way in a short few years.
-     But I'm nowhere near where I want to be. In programming, with its ever-changing languages and technologies, there is always something to be excited about,
+     But I'm nowhere near where I want to be. In software engineering, with its ever-changing languages and technologies, there is always something to be excited about,
      with fun and incredible things awaiting to be built. If feel there is so much to learn, yet so little time\ldots \newline{}
 
     % Like a young child craving for new Lego pieces, programming, with its ever-changing languages and technologies, brings endless fun and new opportunities to improve.
         % Part of what makes programming so much fun is that it is an ever-changing landscape, with an opportunity to innovate and learn around the corner.
 
-    I've been solving problems for the past 15 years, first as a physicist fascinated by the mathematical beauty and complexity of nature's laws, and nowadays as a software
-    developer working on more practical challenges, always aspiring for the the most efficient and clean solution. Although different problems require different tools, the underlying thinking
+    I've been solving problems for the past fifteen years, first as a physicist fascinated by the mathematical beauty and complexity of nature's laws, and nowadays as a software
+    engineer working on more practical challenges, always aspiring for the the most efficient and clean solution. Although different problems require different tools, the underlying thinking
     is usually the same, namely consistant logic, big-picture analysis, generalization of specific solutions, and looking at edge cases, whether working with a
     differential equation or writing a unit test. These are the concepts I work hard to become better at every day.
 
 \nopagebreak[4]
 
 \section{Software Skills}
+  \cvitem{Scala}{
+    \href{https://github.com/inakianduaga/kafka-image-processor/tree/master/ui-backend}{\textbf{Play}},
+    Akka Actors, Sangria GraphQL, Type Classes, RxScala, Circe    
+  }
+
   \cvitem{Javascript}{
-    \href{https://github.com/inakianduaga/node-express-boilerplate}{\textbf{Node.js}},
+    \href{https://github.com/inakianduaga/react-native-demo}{\textbf{React Native}} \href{https://inakianduaga.github.io/react-native-demo/#1}{\textbf{(talk)}},  
+    \href{https://github.com/inakianduaga/react-redux-typescript/tree/develop}{\textbf{React}} \href{https://github.com/inakianduaga/redux-state-history}{\textbf{(Redux)}},
     \href{https://github.com/inakianduaga/github-ci-tasks/tree/develop}{\textbf{TypeScript}},
-    \href{https://github.com/inakianduaga/babel-plugin-markdown-compiler/tree/develop}{\textbf{Babel}},
-    \href{https://github.com/inakianduaga/react-redux-typescript/tree/develop}{\textbf{ReactJS}} \href{https://github.com/inakianduaga/redux-state-history}{\textbf{(w/ redux pattern)}},
+    \href{https://github.com/inakianduaga/kafka-image-processor/tree/master/ui/src}{\textbf{CycleJS}},
     \href{https://github.com/inakianduaga/angular-remote-logger}{\textbf{AngularJS}},
-    jQuery,
-    \href{https://www.npmjs.com/~inakianduaga}{\textbf{Npm}},
-    \href{http://bower.io/search/?q=angular-remote-logger}{Bower},
+    RxJS,
+    \href{https://github.com/inakianduaga/node-express-boilerplate}{\textbf{NodeJS}},
+    \href{https://github.com/inakianduaga/babel-plugin-markdown-compiler/tree/develop}{\textbf{Babel}},
+    Jest,
     \href{https://coveralls.io/github/inakianduaga/angular-remote-logger}{\textbf{Jasmine}},
-    \href{https://github.com/inakianduaga/node-express-boilerplate/blob/master/src/spec/routes/exampleMochaSpec.ts}{Mocha},
-    \href{https://github.com/inakianduaga/log-proxy-server/tree/develop/gulp}{\textbf{Gulp}},
+    \href{https://github.com/inakianduaga/node-express-boilerplate/blob/master/src/spec/routes/exampleMochaSpec.ts}{\textbf{Mocha}},
+    \href{https://www.npmjs.com/~inakianduaga}{\textbf{Npm}},
     Webpack,
-    Grunt.
+    \href{https://github.com/inakianduaga/log-proxy-server/tree/develop/gulp}{\textbf{Gulp}}
+  }
+
+  \cvitem{DevOps}{
+    AWS: Cloudformation, Lambda, Kinesis, ECS, EC2, RDS, SDK, Route53 and more\newline
+    Logging/Metrics: JMX, Datadog, OpsGenie, Rsyslog, Kibana, ElasticSearch\newline
+    CI / CD: \href{https://travis-ci.org/inakianduaga/}{\textbf{Travis}}, \href{https://github.com/inakianduaga/docker-jenkins-nginx}{\textbf{Jenkins}}, GoCD, Github webhooks\newline
+    Containers: \href{https://hub.docker.com/r/inakianduaga/}{\textbf{Docker}}, \href{https://github.com/inakianduaga/kafka-image-processor/blob/master/docker/docker-compose.yml}{\textbf{Docker Compose}}\newline
+    Event Sourcing: \href{https://github.com/inakianduaga/kafka-image-processor}{\textbf{Kafka}}, \href{https://inakianduaga.github.io/kafka-image-processor/}{\textbf{Avro (talk)}}, \href{https://github.com/inakianduaga/kafka-image-processor/blob/master/processor/src/main/scala/com/inakianduaga/Kafka.scala#L29}{\textbf{Akka Kafka Streams}}, ReactiveX\newline
+    Servers: \href{https://github.com/inakianduaga/cloud-development}{\textbf{Nginx}}, Apache, Varnish, Ansible
   }
 
   \cvitem{PHP}{
     \href{https://github.com/inakianduaga/laravel-html-builder-extensions}{\textbf{Laravel}},
     \href{https://packagist.org/users/inakianduaga/packages/}{\textbf{Composer}},
-    \textbf{PHP OOP},
-    \href{https://github.com/inakianduaga/eloquent-external-storage/tree/master/tests}{\textbf{Mockery/Phpunit}},
-    ORM,
-    Types,
-    PHPDoc.
-  }
-
-  \cvitem{DevOps}{
-    \textbf{AWS Stack}: RDS, Cloudfront, EC2, ELB, S3, Route53, OpsWorks, SDK (CLI, NodeJS).
-    \href{https://hub.docker.com/r/inakianduaga/}{\textbf{Docker}},
-    CI (\href{https://travis-ci.org/inakianduaga/}{\textbf{Travis}}, \href{https://github.com/inakianduaga/docker-jenkins-nginx}{\textbf{Jenkins}}),
-    \href{https://github.com/inakianduaga/cloud-development}{\textbf{Nginx}},
-    Apache,
-    Varnish,
-    HHVM,
-    Rsyslog,
-    Kibana,
-    ElasticSearch,
-    automatic blue-green deployments,
-    \href{https://github.com/inakianduaga/cloud-development/tree/master/scripts/upstart}{Upstart}.
+    \href{https://github.com/inakianduaga/eloquent-external-storage/tree/master/tests}{\textbf{Mockery/PHPUnit}}
   }
 
   \cvitem{Other}{
-    \textbf{\href{https://github.com/inakianduaga/cloud-development/search?l=bash}{Bash}},
-    Less,
-    HTML5,
-    Bootstrap,
-    \textbf{\href{https://gist.github.com/inakianduaga/ef2220f975d8fe6aa88d}{Perl}} (tiny bit),
-    \textbf{\href{http://arxiv.org/pdf/0803.3735.pdf}{Latex}}.
+    \href{https://github.com/inakianduaga/cloud-development/search?l=bash}{\textbf{Bash}},
+    \href{http://arxiv.org/pdf/0803.3735.pdf}{\textbf{Latex}},
+    Code quality tools (Scalafmt, PrettierJS, TSLint)
   }
 
-  \cvitem{Versioning}{
-    Git (\href{http://nvie.com/posts/a-successful-git-branching-model/}{git flow}),
-    \href{https://github.com/inakianduaga/}{GitHub},
-    Bitbucket,
-    Automatic Changelogs,
-    Tagged Releases.
-  }
+  % \cvitem{Versioning}{
+  %   Git (\href{http://nvie.com/posts/a-successful-git-branching-model/}{git flow}),
+  %   \href{https://github.com/inakianduaga/}{GitHub},
+  %   Bitbucket,
+  %   Automatic Changelogs,
+  %   Tagged Releases.
+  % }
+
   \cvitem{API}{
-    Rest,
-    \textbf{\href{https://www.tado.com/shop/api/public/v1/api-docs}{Swagger}},
-    OAuth.
+    GraphQL, Apollo Client,
+    Rest, \textbf{\href{https://github.com/inakianduaga/scala-play-car-advert/blob/master/public/swagger/carAdverts.yml}{Swagger}}
   }
 
-  \cvitem{Learning, Queued}{
-    \textbf{ReactiveX},
-    \textbf{AngularJS 2},
-    functional programming,
-    Scala (\textbf{strong-typed languages}),
-    AWS Lambda,
-    Hacklang,
-    Graph DB,
-    WebSockets,
-    React Native,
-    InfluxDB,
-    ClojureScript.
+  \cvitem{To Learn}{
+    Machine learning,  
+    Python,
+    Functional Programming,
+    Kubernetes,
+    Scala Shapeless
   }
 
   \cvitem{}{}
@@ -172,34 +159,45 @@
 
   %\subsection{Professional}
 
+    % autoscout24
+    \cventry{2017-present}{Lead Engineer}{\href{https://www.autoscout24.com}{AutoScout24 GmbH}}{Munich, Germany}{}{\\
+      In charge of pushing innovation at autoscout24 through research of new technologies / frameworks, introduction of best coding practices and improving overall technical abilities of fellow engineers. 
+      Since my start at the beginning of 2017, I've worked towards AutoScout24 goal of merging the mobile and web teams by introducing our team to React / TypeScript, while self-learning and then teaching/advocating for React Native and GraphQL. 
+      This has put our team in an excellent technical position to complete the integration in early 2018. 
+      Some of the things I've worked on:%
+      \begin{itemize}%
+        \item React Native as a solution to integrate mobile development into traditional web teams
+        \item Advocate and introduce GraphQL for newer APIs
+        \item Introduce modern React / TypeScript / ImmutableJS / RxJS frontend stack and migrate existing legacy UI codebase (ongoing)
+        \item Introduce linting/formatting tools for easier team collaboration and more consistent code
+        \item Introduce PR-based commit approach where every contribution is peer-reviewed, raising code awareness and quality through feedback
+        \item Mentor Junior \& new engineers in both company processes and programming know-how  
+      \end{itemize}}
+
     % tado
-    \cventry{2013 - Now}{Full Stack Developer}{\href{https://www.tado.com}{tado gmbh}}{Munich, Germany}{}{\\
-      In charge of developing and maintaining the entire frontend \& backend of the main \href{https://www.tado.com}{tado.com} website, plus an internal dashboard/order management system used by customer support to handle the online shop. In addition, I manage the entire website content lifecycle, including CI infrastructure, AWS EC2 server setup/provisioning, database migrations/backups, code deployments, logging, performance tuning, etc.\newline{}%
-      Some of the tasks I frequently do:%
-      \begin{itemize}%
-        \item Upgrading all dev \& production software stacks (incl packages and tooling).
-        \item Management of the entire deployment pipeline (incl. daily continuous deployments).
-        \item Adding functionality and improving the AngularJS-based webshop.
-        \item Implementing advanced backend features to support the complex website structure (external SDKs, multilanguage support, order invoicing, user accounts, etc).
-      \end{itemize}}
-
+    \cventry{2013 - 2016}{Full Stack Developer}{\href{https://www.tado.com}{tado GmbH}}{Munich, Germany}{}{\\
+      In charge of developing and maintaining the entire frontend \& backend of the main \href{https://www.tado.com}{tado.com} website, including CI infrastructure, AWS EC2 server setup/provisioning, RDS database migrations/backups, code deployments, logging \& performance tuning.
+      % Some of the responsabilities included:
+      % \begin{itemize}%
+      %   \item Upgrading code \& content for the tado.com website and its ReactJS-based webshop.
+      %   \item Management of the entire deployment pipeline (incl. daily continuous deployments).
+      %   \item Implementing advanced backend features to support the complex website structure (external SDKs, multilanguage support, order invoicing, user accounts).
+      % \end{itemize}
+    }
+    
     % thecouponbay
-    \cventry{2010 - 2013}{Admin/Site Owner}{\href{https://web.archive.org/web/20141102092727/http:/thecouponbay.com/}{TheCouponbay.com}}{USA/Munich}{}{\newline{}%
-      Site owner and administrator, with the following core functions:
-      \begin{itemize}%
-        \item Full-stack web developer for all backend and frontend operations sitewide, including entire website design, server security, 3rd party API integrations
-        \item Manage marketing operations by creating and running Google Adwords \& Microsoft Bing Ads advertising campaigns through a self-built custom interface.
-        \item Establish affiliate partner relationships with publishers such as HP, Dell, Lenovo and Sony.
-      \end{itemize}}
-
+    \cventry{2010 - 2013}{Entrepreneurship (Admin/Site Owner)}{\href{https://web.archive.org/web/20141102092727/http:/thecouponbay.com/}{TheCouponbay.com}}{USA/Munich}{}{
+      Site owner and administrator of an affiliate-marketing website, responsible for all backend and frontend operations sitewide, including entire website code, 
+      server security, and managing affiliate partner relationships with publishers such as HP, Dell, Lenovo and Sony.
+    }
 
   %\subsection{Academic}
     % UIUC
     \cventry{2004-2010}{Teaching Assistant}{UIUC}{Urbana-Champaign, USA}{}{
       \begin{itemize}
-        \item Classroom teaching of beginner and intermediate courses in Physics, such as Thermodynamics, Electromagnetism.
+        \item Classroom teaching of beginner and intermediate courses in Physics
         % \item Grading of labs, exams and homework assignments.
-        \item Ranked as “Excellent Teacher Assistant” on multiple semesters (\href{http://cte.illinois.edu/teacheval/ices/pdf/Sp08List.pdf}{Spring 2008}, \href{http://cte.illinois.edu/teacheval/ices/pdf/Spring09List.pdf}{2009}, \& \href{http://cte.illinois.edu/teacheval/ices/pdf/Spring10List.pdf}{2010}, \href{http://cte.illinois.edu/teacheval/ices/pdf/Fall09List.pdf}{Fall 2009}).
+        \item Ranked as “Excellent Teacher Assistant” on multiple semesters (\href{http://cte.illinois.edu/teacheval/ices/pdf/Sp08List.pdf}{2008}, \href{http://cte.illinois.edu/teacheval/ices/pdf/Spring09List.pdf}{2009}, \& \href{http://cte.illinois.edu/teacheval/ices/pdf/Spring10List.pdf}{2010})
       \end{itemize}
     }
 
@@ -208,15 +206,14 @@
   \cventry{2004-2010}{Physics Ph.D}{UIUC}{Urbana-Champaign, USA}{\textit{GPA: 3.92}}{
     \begin{itemize}
       \item Specialization in theoretical Condensed Matter Physics
-      \item Thesis: \href{https://www.ideals.illinois.edu/handle/2142/18225}{“Many body topics in condensed matter physics”}.
+      \item Thesis: \href{https://www.ideals.illinois.edu/handle/2142/18225}{“Many body topics in condensed matter physics”}
     \end{itemize}
   }
   \cventry{1998-2004}{Physics Bacherlor}{Instituto Balseiro / UNLP}{Argentina}{\textit{8.96/10}}{}
 
 \section{Languages}
-  \cvitemwithcomment{English}{Fluent}{C2 level, lived 7 years in the USA}
-  \cvitemwithcomment{German}{Intermediate}{}
-  \cvitemwithcomment{Spanish}{Native speaker}{}
+  \cvitem{English}{Fluent (C2 level)}
+  \cvitem{Others}{German (Intermediate), Spanish (Native Speaker)}
 
 \section{Publications}
 
