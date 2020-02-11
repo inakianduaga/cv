@@ -3,22 +3,22 @@ dist: trusty
 # services:
 #   - docker
 before_install:
-- docker pull blang/latex
+  - docker pull blang/latex
 script:
-- mkdir _build
-#http://unix.stackexchange.com/questions/118217/chmod-silent-mode-how-force-exit-code-0-in-spite-of-error
-- docker run --rm -i --net=none -v $PWD:/data blang/latex pdflatex -interaction=nonstopmode --output-directory=./_build inaki_anduaga_cv.tex || true
-# Give back ownership of file to current user
-- sudo chown -R $USER:$USER ./_build
-# Remove non-pdf files from build folder
-- find ./_build -type f ! -name '*.pdf' -delete
+  - mkdir _build
+  #http://unix.stackexchange.com/questions/118217/chmod-silent-mode-how-force-exit-code-0-in-spite-of-error
+  - docker run --rm -i --net=none -v $PWD:/data blang/latex pdflatex -interaction=nonstopmode --output-directory=./_build inaki_anduaga_cv.tex || true
+  # Give back ownership of file to current user
+  - sudo chown -R $USER:$USER ./_build
+  # Remove non-pdf files from build folder
+  - find ./_build -type f ! -name '*.pdf' -delete
 deploy:
   # Github Release
   - provider: releases
     api_key:
-      secure: lOkcpMMgh+ojNQv1sbB2SSyuQUjm3boXZb+XdEK7B4m6oSWCvOU4nv3BWL8iAXqWZCPAr7Z8C+yxxV0F/QCpnJTe4peUpn4S1lB4ZkXOmtxQEZDooGpIQ1u1RCISOeLIu8pJWhK6ba7keiG+LkZ689Mgv6lC/FCqMbqxDN2UalRm8cvk7w3CCbReeGs7/yVERKlJB4JsfjA9F5WZDO3bK3yDZt+U1u4s7RO7RBmdOxY1olO9yc5HT580UBqfWh5gZOpXy0SUcPAaZZg7EhHP2hyAMPM/XS9wYa73QnaiPjTmk4QGvZ2hGEoDuL+A/RJ41vsMqTh6VoO/0t8Ak2B78vfBi1SGwgDEG5H2mKNauARPGsCWiAgc33hn+rml90ddQXclmLe9B8v/8/gp7aFERHxky0CrJgIhhjpR3O7H3h18EZwKd/YeFK0cPuH1oxJ2GItfzx/HkkPQOGQpcbFg5thS2FexqnBHoTzcKE8N5t2IMReWGoUJTndcOujo66wDywUwtNEKLtzKlePGxoUZlxH5hqECaG2CMWSN21rGzaTHyT7KxmZ0xv4edgtFE038szZLLXXiDUs4MQA2ZULkDKIFJzhWdMXsPJoMqgvmzk4J408dRuiAYR6IGICWuLpCS1LBr972LR7UPv1N+YPvv8b95uvkSWv2d3gS3DkNFNU=
+      secure: hE1yJ5YZByEmRzopTsna+mY1mRGk1usibo9slzkq+aj4dQhV1n/ZKIGCp1sYeTf0Z34Vsujtz8xOSMagMZZel7vITG0jqgGtgPpeshxnwW4K2X7TtAhK69CSZ92gwZa8GCgU/Y2jWlRv4sJVcPecARnCtPwSmzZMHiGYxucaX2k/L68GVXW+E01EVfM5NGb6edVlk3am1pctmwzIS4Bft6SaX5O3oEl6WeHK5cW1LcZ0YsBCocbyUBL0ETvYfVjlXOkJ6oMAJyyPYGIetucyyG5alWWRk6Mxn5r4rHw2Df2tV4poEV24Ck/2gQSfESzf298SCcTJ5pzUIkwE/cjU4PTkDu2letb34J6cPC559LgmDjor8c3p9FZo1igAYDsgv4zpuLdECa7RM76FRNXbBCQcwDm0NzC075t4djFQ5+l0Ot84wmxcQtmDwWJjPGtDnVXgMueaC7g7Ops9DTyfYU0xsB7Ep/AXxWVM7aM/1T5Da9fZbI2zjqq0UlYEOyyZH/YYCn090w53nSJWq74J0fUbi4QdgCiiHx/YErCSLYj16gAtEKge1bSDfF9h3kXxStQDtwHrdWk31rdy+PUTEN2tWv9hrML/IULygCQFem3p/tx9vcvG/+OnoZnyHQTBKJmn3SMjU1M3d+jjQItS9OJnvctlSDX5QtiSpZjmWZY=
     file:
-    - _build/inaki_anduaga_cv.pdf
+      - _build/inaki_anduaga_cv.pdf
     skip_cleanup: true
     on:
       repo: inakianduaga/cv
