@@ -38,6 +38,6 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "build": "node ./node_modules/gulp/dist/gulp.js build"
+    "build": "gulp build"
   }
 }
