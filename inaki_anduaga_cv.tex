@@ -26,9 +26,10 @@
 \IfFileExists{picture2.png}{%
   \AddToShipoutPictureFG*{%
     \begin{tikzpicture}[remember picture,overlay]
-      \node[anchor=north west,inner sep=0pt] at
-        ([xshift=2.0cm,yshift=-0.95cm]current page.north west)
-        {\includegraphics[width=1.85cm,height=1.85cm,keepaspectratio]{picture2.png}};
+      % Align the photo's bottom with the name, above the header rule.
+      \node[anchor=south west,inner sep=0pt] at
+        ([xshift=2.0cm,yshift=-3.55cm]current page.north west)
+        {\includegraphics[width=2.60cm,height=2.60cm,keepaspectratio]{picture2.png}};
     \end{tikzpicture}%
   }%
 }{}
