@@ -1,205 +1,83 @@
-%% start of file `template.tex'.
-%% Copyright 2006-2015 Xavier Danaux (xdanaux@gmail.com).
-%
-% This work may be distributed and/or modified under the
-% conditions of the LaTeX Project Public License version 1.3c,
-% available at http://www.latex-project.org/lppl/.
-
-
-\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
-
-% moderncv themes
-\moderncvstyle{casual}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
-\moderncvcolor{blue}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
-%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
-% \nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
-
-% character encoding
+% Proposed revision of inakianduaga/cv/inaki_anduaga_cv.tex
+% October 2026 revision: AI-native engineering transformation focus.
+% Maintains the original moderncv style and direct, results-oriented voice.
+\documentclass[11pt,a4paper,sans]{moderncv}
+\moderncvstyle{casual}
+\moderncvcolor{blue}
 \usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
-%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
-
-% http://tex.stackexchange.com/questions/27258/how-do-i-write-underline-text-but-with-a-dotted-line
-%\usepackage{ulem} % Enable for dotted text
+\usepackage[utf8]{inputenc}
+\usepackage[scale=0.80]{geometry}
+\usepackage{eso-pic}
 \usepackage{tikz}
-
-\newcommand{\udot}[1]{%
-    \tikz[baseline=(todotted.base)]{
-        \node[inner sep=1pt,outer sep=0pt] (todotted) {#1};
-        \draw[dotted] (todotted.south west) -- (todotted.south east);
-    }%
-}%
-
-
-% adjust the page margins
-\usepackage[scale=0.75]{geometry}
-% \setlength{\hintscolumnwidth}{2.5cm}                % if you want to change the width of the column with the dates
-%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
-
-% personal data
+\setlength{\hintscolumnwidth}{2.65cm}
+\AtBeginDocument{\recomputelengths}
 \name{Inaki}{Anduaga}
-\title{Curriculum Vitae}                               % optional, remove / comment the line if not wanted
-\address{81245 Munich}{Germany}   % optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
-\phone[mobile]{+49~17645815550}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
-% \social[github]{inakianduaga}                              % optional, remove / comment the line if not wanted
-\email{inaki@inakianduaga.com}                               % optional, remove / comment the line if not wanted
-% \homepage{inakianduaga.com}                         % optional, remove / comment the line if not wanted
-\social[linkedin]{inakianduaga}                        % optional, remove / comment the line if not wanted
-%\social[twitter]{jdoe}                             % optional, remove / comment the line if not wanted
-% \extrainfo{additional information}                 % optional, remove / comment the line if not wanted
-\photo[64pt][0]{picture2.png}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
-%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+\title{VP Engineering \textbar{} AI-Native Engineering Transformation}
+\address{Munich}{Germany}
+\phone[mobile]{+49~17645815550}
+\email{inaki@inakianduaga.com}
+\social[linkedin]{inakianduaga}
+\social[github]{inakianduaga}
+% The optional photograph overlays unused top-left header space instead of
+% changing the title height (which would move experience to a third page).
 
-% bibliography adjustements (only useful if you make citations in your resume, or print a list of publications using BibTeX)
-%   to show numerical labels in the bibliography (default is to show no labels)
-% \makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
-%   to redefine the bibliography heading string ("Publications")
-%\renewcommand{\refname}{Articles}
-
-% bibliography with mutiple entries
-%\usepackage{multibib}
-%\newcites{book,misc}{{Books},{Others}}
-%----------------------------------------------------------------------------------
-%            content
-%----------------------------------------------------------------------------------
 \begin{document}
-%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
-%-----       resume       ---------------------------------------------------------
+% The existing picture2.png stays optional, and this overlay does not take space.
+\IfFileExists{picture2.png}{%
+  \AddToShipoutPictureFG*{%
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[anchor=north west,inner sep=0pt] at
+        ([xshift=2.0cm,yshift=-0.95cm]current page.north west)
+        {\includegraphics[width=1.85cm,height=1.85cm,keepaspectratio]{picture2.png}};
+    \end{tikzpicture}%
+  }%
+}{}
 \makecvtitle
-
 \section{About me}
-
-\textbf{Driving change. At maximum speed. With uncompromising quality.}  A relentless passion for improving processes, mastering emerging technologies, and delivering scalable solutions is what keeps me up late at night. The end objective is simple: Give my clients a competitive advantage to move faster than the competition, delivering not just products, but an engineering culture with well-defined processes and cohesive teams that establish a foundation for sustainable growth. \\
-
-I lead tech initiatives that accelerate delivery and impact—combining cloud expertise, sharp execution, and AI. By applying AI to streamline workflows and power customer solutions, I help teams move faster and deliver smarter. My hands-on engineering and startup experience keep my leadership rooted in execution.
-
-\nopagebreak[4]
+\textbf{Driving change. At maximum speed. With uncompromising quality.} I have always been driven by learning fast, challenging the way things are done and using technology to give businesses a competitive advantage. Today, that means helping engineering teams move beyond AI-assisted coding toward AI-native software delivery: autonomous agents, fast feedback loops and quality built into every step.\\[3pt]
+I combine engineering leadership---running complex projects, shaping strategy and building high-performing teams---with hands-on experience at the leading edge of agentic development. I push engineering boundaries through the complex projects I lead, turning what I learn into practical processes. The objective remains simple: better products, delivered faster, with teams and architectures built for sustainable growth.
 
 \section{Professional Experience}
+\cventry{2023--present}{VP Engineering}{zvoove}{Munich, Germany}{}{%
+Leading engineering innovation and delivery for enterprise ERP products and integrations, including a completely new agentic ERP for temporary staffing. Working across architecture, cloud strategy, staffing, budgets and international delivery teams; partnering with product leadership, the CEO and the board on technical strategy.
+\begin{itemize}\setlength{\itemsep}{2pt}
+  \item \textbf{Autonomous software factories:} Led the shift from AI coding assistance to agent-driven delivery, combining long-running coding agents, automated multi-model PR reviews, agent-guided merge decisions and iterative fixes. As code generation accelerates, verification becomes the next engineering challenge; introduced ticket-level, production-like ephemeral environments to shorten the build--test--deploy feedback loop.
+  \item \textbf{Months to days:} One example among many AI-native deliveries across teams: a DocuSign-like digital-signature module built in four days of continuous agentic development, plus a few days of polish. One engineer and one product manager delivered a richer solution---email, 2FA and AI-assisted document detection---than an earlier version that had required two engineering teams roughly six months.
+  \item \textbf{AI-native product development:} Reworked the flow from product idea to implementation. Turned discussions into AI-assisted specifications and usable UI concepts in minutes, avoiding sequential hand-offs and bringing in UX specialists for polish when needed. Built complex ERP features, including cross-entity fuzzy search, through short agent-driven iterations.
+  \item \textbf{Automated maintenance:} Extended agentic workflows beyond feature development into ongoing engineering upkeep. Examples include overnight AWS "Night Watch" agents flagging infrastructure anomalies and security findings, and automated feature-flag cleanup. Findings generate actionable tickets for autonomous follow-up, complemented by asynchronous architecture and code-quality reviews.
+  \item \textbf{Smaller, stronger teams:} Reshaped delivery around lean, high-agency engineering teams, reducing coordination overhead and emphasizing learning speed, critical judgment, ownership and the ability to verify AI-generated work---without losing sight of operational resilience.
+  \item \textbf{Broad engineering delivery:} Led and delivered on schedule a cross-platform mobile app, document storage solution, a unified central API connecting on-premise and SaaS ERP data, and an Insights BI platform---all within a complex legacy and hybrid-cloud environment.
+\end{itemize}}
 
-%\subsection{Professional}
-\cventry{2023-current}{VP Engineering}{Zvoove}{Munich, Germany}{}{
-In charge of innovation and execution of projects around Zvoove ERP integrations, including customers and external partners, as well as subsidiaries of Zvoove across different countries. Responsibilities involve project staffing including near-shore and offshore, budgeting, project management, cloud strategy, and architectural reviews. Highlight: \em{Deliver a unified API in Germany to access both onPrem and SaaS customer data seamlessly}
-}
+\cventry{2023--2026}{Fractional CTO / Technology Advisor}{Independent}{Remote, US startups}{}{%
+Advised US startups on technology strategy, architecture, cloud scalability and engineering practices. Delivered an agentic customer-support solution for HVAC installation inquiries and upselling in three months, and an agentic social-media solution with customer-defined natural-language flows for upselling and e-commerce product recommendations.}
 
-\cventry{2023-current}{Fractional CTO}{}{Remote}{}{
-	Advising startups and small companies on technical leadership—auditing their stack, shaping cloud strategy, improving engineering practices, identifying scalability gaps, and supporting tech hiring.
-}
+\cventry{2023--2024}{Director Technology}{Edenspiekermann}{Berlin, Germany}{}{%
+Owned technical delivery for client products, from planning and staffing through architecture and launch. Delivered a cross-platform React Native product for an energy-sector client, rolled out across multiple countries with a near-shore team.}
 
-\cventry{2023-2024}{Director Technology}{Edenspiekermann}{Berlin, Germany}{}{
-	Led the entire lifecycle of a digital product from a technical perspective for several clients, overseeing planning, budgeting, estimations, staffing, and guiding execution until hand-over. Highlight: \em{Successfully delivered a cross-platform React Native application for a client in the energy sector, rolled out across multiple countries, and developed by near-shore engineers}. 
-}
+\cventry{2021--2022}{Smyle Management Team}{AutoScout24}{Munich, Germany}{}{%
+Defined priorities and execution strategy for the online car-sales business. Led a distributed team of \textbf{30 engineers across three countries} to launch the smyle MVP in \textbf{six months}, from design to first car sold online; subsequently built a high-performance business and product analytics platform.}
 
-\cventry{2021-2022}{Smyle Management Team}{AutoScout24 GmbH}{Munich, Germany}{}{
-	As part of the smyle online car sales management team, I defined and prioritized business objectives, generated strategy to achieve them, and guided the product teams in its execution.
-	\begin{itemize}%
-		\item 2021: Led the technical implementation of the smyle MVP, \emph{achieving a record launch time of only 6 months, from design to first car sold online}, and responsible for a team of 30 engineers remotely across three different countries. 
-		\item 2022: Managed the smyle analytics team, \emph{creating a brand-new, high-performance platform for data processing and visualization} of all business \& product KPIs.
-	\end{itemize}
-}
-														
-\cventry{2019-2021}{Principal Software Engineer}{\href{https://www.autoscout24.de}{AutoScout24 GmbH}}{Munich, Germany}{}{\\
-	Reduced technical complexity, drove architecture, and enhanced the quality of solutions and code across the organization. Led high-impact initiatives to improve engineering practices, served as a technical lead for multiple teams, and improved communication among engineering teams. Highlight: \em{\$1M+ savings on recurring AWS infrastructure cost}.
-}
-																													
-% autoscout24
-\cventry{2017-2019}{Lead Engineer}{\href{https://www.autoscout24.de}{AutoScout24 GmbH}}{Munich, Germany}{}{\\
-Drove innovation at AutoScout24 by researching new technologies, introducing best coding practices, and enhancing the overall technical abilities of fellow engineers.	
-}
-																													
-% tado
-\cventry{2013 - 2016}{Full Stack Developer}{\href{https://www.tado.com}{tado GmbH}}{Munich, Germany}{}{\\
-Spearheaded the development and maintenance of the entire frontend and backend of the main \href{https://www.tado.com}{tado.com} website, optimizing infrastructure, provisioning AWS servers, managing database migrations, overseeing code deployments, and tuning performance.	
-% Some of the responsibilities included:
-	% \begin{itemize}%
-	%   \item Upgrading code \& content for the tado.com website and its ReactJS-based webshop.
-	%   \item Management of the entire deployment pipeline (incl. daily continuous deployments).
-	%   \item Implementing advanced backend features to support the complex website structure (external SDKs, multilanguage support, order invoicing, user accounts).
-	% \end{itemize}
-}
-																													
-% thecouponbay
-\cventry{2010 - 2013}{Entrepreneurship (Founder)}{\href{https://web.archive.org/web/20141102092727/http:/thecouponbay.com/}{TheCouponbay.com}}{USA/Munich}{}{
-Led all backend, frontend, and cloud operations of an affiliate-marketing website. Highlight: \em{\$300k in Google Adwords spending self-funded from website revenue. Roughly \$500k in total revenue over 4 years}.	
-}
-																													
-%\subsection{Academic}
-% UIUC
-\cventry{2004-2010}{Teaching Assistant}{UIUC}{Urbana-Champaign, USA}{}{
-	\begin{itemize}
-		\item Classroom teaching of beginner and intermediate courses in Physics
-		      % \item Grading of labs, exams and homework assignments.
-		\item Ranked as “Excellent Teacher Assistant” on multiple semesters (\href{http://cte.illinois.edu/teacheval/ices/pdf/Sp08List.pdf}{2008}, \href{http://cte.illinois.edu/teacheval/ices/pdf/Spring09List.pdf}{2009}, \& \href{http://cte.illinois.edu/teacheval/ices/pdf/Spring10List.pdf}{2010})
-	\end{itemize}
-}
+\cventry{2017--2021}{Principal Software Engineer / Lead Engineer}{AutoScout24}{Munich, Germany}{}{%
+Drove architecture, engineering practices and cross-team technical leadership. Simplified systems and improved cloud efficiency, delivering \textbf{\$1M+ in savings on recurring AWS infrastructure costs}.}
 
-\section{Skills (non-exhaustive)}
+\cventry{2013--2016}{Full Stack Developer}{tado}{Munich, Germany}{}{%
+Built and operated the main website and commerce infrastructure end to end, spanning frontend, backend, cloud provisioning, data migrations, deployment and performance.}
 
-\cvitem{Leadership}{
-	Project management, business strategy, team communication \& culture, coaching high-performance teams, staffing (incl. near and offshore) and budgeting.  
-}
+\cventry{2010--2013}{Founder}{TheCouponbay.com}{USA / Munich}{}{%
+Built and operated a self-funded online affiliate business from scratch, generating roughly \textbf{\$500k in revenue} over four years without external investment.}
 
-\cvitem{Product}{
-	Cycle planning, A/B testing, cross-functional team setup experience.
-}
+\section{Expertise}
+\cvitem{AI-native delivery}{Autonomous software factories, agent orchestration, AI code review, long-running agents, automated verification, ephemeral environments, AI-assisted product discovery.}
+\cvitem{Leadership}{Engineering strategy, organizational transformation, hiring and coaching, team design, budgeting, multi-country delivery, executive stakeholder management.}
+\cvitem{Engineering}{Cloud architecture and FinOps, AWS, Azure, Kubernetes, serverless, infrastructure as code, CI/CD, observability, APIs, data platforms.}
+\cvitem{Hands-on}{TypeScript, Python, Scala, software architecture, full-stack development, systems performance and automation.}
 
-\cvitem{Scalability}{
-	Language \& framework standardization, documentation, establishing best practices.
-}
-
-\cvitem{Tooling}{
-	Library design, application \& infrastructure templating.
-}
-
-\cvitem{APIs}{
-	\emph{\href{https://github.com/inakianduaga/scala-play-car-advert/blob/master/public/swagger/carAdverts.yml}{OpenAPI}}, GraphQL, schema stitching, code-generation tooling.
-}
-
-\cvitem{DevOps}{
-	AWS CDK, Cloudformation, Terraform, Kubernetes, Helm, Serverless, FinOps.
-}
-
-\cvitem{Cloud}{
-	AWS, Azure, Kubernetes
-}
-
-\cvitem{Observability}{
-	OpenTracing, Datadog, Sentry, OpsGenie, Grafana, Prometheus.	
-}
-
-\cvitem{CI/CD}{
-	GitHub actions, Azure Devops, \href{https://github.com/inakianduaga/docker-jenkins-nginx}{\emph{Jenkins}}, \href{https://travis-ci.org/inakianduaga/}{\emph{Travis CI}}.
-}
-
-\cvitem{Analytics}{
-	Data processing \& scalability, data infrastructure, BI tooling.
-}
-
-\cvitem{Languages}{
-	TypeScript, \href{https://github.com/inakianduaga/kafka-image-processor/tree/master/ui-backend}{\emph{Scala}}, Python, \href{https://github.com/inakianduaga/laravel-html-builder-extensions}{\emph{PHP}}, \href{https://github.com/inakianduaga/cloud-development/search?l=bash}{\emph{Bash}}
-}
-
-\cvitem{Data Streams}{
-  \href{https://github.com/inakianduaga/kafka-image-processor}{\emph{Kafka}}, \href{https://inakianduaga.github.io/kafka-image-processor/}{\emph{Avro (talk)}}, \href{https://github.com/inakianduaga/kafka-image-processor/blob/master/processor/src/main/scala/com/inakianduaga/Kafka.scala#L29}{\emph{Akka Kafka Streams}}, ReactiveX.
-}
-																													
-\section{Higher Education}
-\cventry{2004-2010}{Physics Ph.D}{UIUC}{Urbana-Champaign, USA}{\textit{GPA: 3.92}}{
-	\begin{itemize}
-		\item Specialization in theoretical Condensed Matter Physics. \href{https://www.ideals.illinois.edu/handle/2142/18225}{“Thesis}
-	\end{itemize}
-}
-\cventry{1998-2004}{Physics Bacherlor}{Instituto Balseiro / UNLP}{Argentina}{}{}
-																													
+\section{Education}
+\cventry{2004--2010}{Ph.D. in Physics}{University of Illinois Urbana-Champaign}{USA}{}{Theoretical condensed matter physics.}
+\cventry{1998--2004}{Bachelor's in Physics}{Instituto Balseiro / UNLP}{Argentina}{}{}
 \section{Languages}
-\cvitem{English}{Fluent (C2 level)}
-\cvitem{Others}{German (Intermediate), Spanish (Native Speaker)}
-																													
-% \section{Publications}
-																													
-%   \cventry{2008}{Michael Stone, Inaki Anduaga and Lei Xing}{}{The classical hydrodynamics of the Calogero–Sutherland model}{\textit{J. Phys. A: Math. Theor. 41 275401 doi:10.1088/1751-8113/41/27/275401}}{}
-%   \cventry{2007}{Michael Stone, Inaki Anduaga}{}{Mass flows and angular momentum density for $ p_x + i p_y $ paired fermions in a harmonic trap}{\textit{Annals of Physics DOI:10.1016/j.aop.2007.04.020}}{}
-																													
-\end{document}
+\cvitem{}{English (fluent, C2) \quad Spanish (native) \quad German (intermediate)}
 
-%% end of file `template.tex'.
+% Exact end date for independent consulting (currently shown as 2026) should be confirmed before publication.
+\end{document}
